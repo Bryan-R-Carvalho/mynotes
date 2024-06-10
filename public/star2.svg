@@ -1,0 +1,12 @@
+<svg width="20" height="20" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1">
+
+ <g>
+  <title>Layer 1</title>
+  <g id="239746" transform="matrix(46.9753 0 0 46.9753 500.0001 500.0001)">
+   <path id="svg_2" fill-rule=" nonzero" fill=" rgb(69,90,100)" stroke-miterlimit="4" stroke-linejoin=" miter" stroke-dashoffset="0" stroke-dasharray=" none" stroke=" none" stroke-linecap=" butt" d="m0.00003,3.7641l-3.63828,2.1965l0.95796,-4.1415l-3.21253,-2.78673l4.23821,-0.35802l1.65464,-3.90922l1.65467,3.90922l4.2382,0.35802l-3.2125,2.78673l0.9579,4.1415m6.038,-8.14744l-6.9572,-0.59025l-2.71907,-6.41537l-2.71903,6.41537l-6.95724,0.59025l5.27357,4.57684l-1.57723,6.8025l5.97993,-3.6093l5.97997,3.6093l-1.5869,-6.8025l5.2832,-4.57684z" vector-effect="non-scaling-stroke"/>
+  </g>
+  <g id="234074" transform="matrix(48.4296 0 0 50.178 498.6398 510.3936)">
+   <path id="svg_3" fill-rule=" nonzero" fill=" rgb(241,196,15)" stroke-miterlimit="4" stroke-linejoin=" miter" stroke-dashoffset="0" stroke-dasharray=" none" stroke-width="0.6976" stroke=" rgb(243,156,18)" stroke-linecap=" butt" d="m0.0002,-6.2443l1.5501,4.7699l5.015,0.0002l-4.057,2.9482l1.55,4.7703l-4.0581,-2.948l-4.0577,2.948l1.5497,-4.7703l-4.0575,-2.9482l5.0154,-0.0002l1.5501,-4.7699z" vector-effect="non-scaling-stroke"/>
+  </g>
+ </g>
+</svg>

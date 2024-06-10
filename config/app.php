@@ -82,7 +82,7 @@ return [
 
     'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
 
-    'faker_locale' => env('APP_FAKER_LOCALE', 'en_US'),
+    'faker_locale' => env('APP_FAKER_LOCALE', 'pt_BR'),
 
     /*
     |--------------------------------------------------------------------------
@@ -121,6 +121,22 @@ return [
     'maintenance' => [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
+    ],
+
+    'cores' => [
+        '#FFF',
+        '#BAE2FF',
+        '#B9FFDD',
+        '#FFE8AC',
+        '#FFCAB9',
+        '#F99494',
+        '#9DD6FF',
+        '#ECA1FF',
+        '#DAFF8B',
+        '#FFA285',
+        '#CDCDCD',
+        '#979797',
+        '#A99A7C',
     ],
 
 ];
