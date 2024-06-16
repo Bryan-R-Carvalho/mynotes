@@ -44,20 +44,8 @@ Open the [layout mockup](https://www.figma.com/file/sQrUVHTlyogq3qGdkqGTXN/mocku
 10. Does the application meet the functionality requirements listed above?
 11. Is the code well-organized, easy to read, and well-documented?
 12. Are modern web development tools and best practices used?
-13. Is the application visually appealing and responsive?
+13. Is the application visually appealing and responsive
 
-### Backend
-Repository: 
-1. PHP: ^7.4
-2. Laravel: ^8.0
-3. Database: Choose your own, you can even use PostgreSQL.
-
-### Frontend
-Repository: 
-1. Node: ^16.15.0
-2. NPM: ^8.5.5
-3. Framework: React TS
-4. Sass or other preprocessor
 
 ### Want to impress us even more?
 If you feel comfortable and want to impress us even more, you can do the following:
@@ -68,13 +56,3 @@ If you feel comfortable and want to impress us even more, you can do the followi
 4. Work on docker containers
 5. Work on tests
 6. Work on CI/CD
-
-### What to do when you finish?
-
-Create a file PULL_REQUEST.md where you will describe what you did and how in as much detail as possible. Feel free to add videos for better explanation.
-
-Create a new pull request using the same branch name for Backend and Frontend
-
-Send us the pull requests and that's all!
-
-#### Good luck! The sky is the limit 🚀
