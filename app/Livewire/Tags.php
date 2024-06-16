@@ -16,15 +16,19 @@ class Tags extends Component
 
     public function mount()
     {
-        $this->cores = array_slice(CoresNota::getAllColors(), 1);
-        $this->tags = Tag::all();
-
+        $this->cores = CoresNota::getAllColors();
+        $this->tags = Tag::where('user_id', auth()->id())->get();
     }
 
     public function selectTag($cor)
     {
-        //passa o hex
-        $this->dispatch('filtraTag', cor: $cor);
+        if ($this->corTag == $cor) {
+            $this->corTag = null;
+            $this->dispatch('filtraTag', cor: null);
+        } else {
+            $this->corTag = $cor;
+            $this->dispatch('filtraTag', cor: $cor);
+        }
     }
 
     public function render()

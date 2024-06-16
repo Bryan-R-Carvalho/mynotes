@@ -15,15 +15,12 @@ class ContainerNotas extends Component
 
     public function mount()
     {
-        $this->notas = Nota::where('user_id', auth()->id())
-            ->where('favoritado', 0)
+        $notas = Nota::where('user_id', auth()->id())
             ->orderBy('created_at', 'desc')
             ->get();
 
-        $this->favoritos = Nota::where('user_id', auth()->id())
-            ->where('favoritado', 1)
-            ->orderBy('created_at', 'desc')
-            ->get();
+        $this->favoritos = $notas->where('favoritado', 1);
+        $this->notas = $notas->where('favoritado', 0);
     }
 
     #[On('filtraNota')]
@@ -44,11 +41,17 @@ class ContainerNotas extends Component
     #[On('filtraTag')]
     public function filterByTag($cor)
     {
-        $cor = CoresNota::getNumberByHex($cor);
-        $notas = Nota::where('user_id', auth()->id())
-            ->where('cor', $cor)
-            ->orderBy('created_at', 'desc')
-            ->get();
+        if ($cor == null) {
+            $notas = Nota::where('user_id', auth()->id())
+                ->orderBy('created_at', 'desc')
+                ->get();
+        } else {
+            $cor = CoresNota::getNumberByHex($cor);
+            $notas = Nota::where('user_id', auth()->id())
+                ->where('cor', $cor)
+                ->orderBy('created_at', 'desc')
+                ->get();
+        }
 
         $this->favoritos = $notas->where('favoritado', 1);
         $this->notas = $notas->where('favoritado', 0);
