@@ -12,7 +12,6 @@
     <div class="flex">
         {{-- editar nota --}}
         <a href="{{ route('notas.update', ['nota' => $nota->id]) }}" ><div class="hover:bg-slate-400 hover:bg-opacity-25 hover:rounded-full px-2 pt-2 pb-0 "><img src="edit.svg" alt="edit"></a></div>  
-        {{-- <div class="hover:bg-slate-400 hover:bg-opacity-25 hover:rounded-full p-2"><img src="edit.svg" alt="edit"></div> --}}
 
         {{-- alterar cor --}}
         <div :class="{ 'hover:bg-slate-400 hover:bg-opacity-25 hover:rounded-full': !open }" class="p-2 z-50" x-data="{ open: false }">
