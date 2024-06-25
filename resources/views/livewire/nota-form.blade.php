@@ -5,9 +5,9 @@
                 <input type="text" wire:model="titulo" class="mr-auto border-solid pe-3 w-full font-bold" placeholder="Título">
                 <button wire:click="alternarFavorito" type="button" class="ml-auto w-6 h-6">
                     @if($favoritado)
-                        <img src="star2.svg" class="w-6 h-6" alt="Favoritado">
+                        <img src="star2.svg" class="w-6 h-6" alt="Favoritado" title="Desfavoritar">
                     @else
-                        <img src="star.svg" class="w-6 h-6" alt="Desfavoritar">
+                        <img src="star.svg" class="w-6 h-6" alt="Desfavoritado" title="Favoritar">
                     @endif
                 </button>            
             </div>

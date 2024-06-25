@@ -11,11 +11,12 @@
     <p class="text-gray-600 min-h-72 max-h-72 text-pretty" >{{ $nota->conteudo }}</p>
     <div class="flex">
         {{-- editar nota --}}
-        <a href="{{ route('notas.update', ['nota' => $nota->id]) }}" ><div class="hover:bg-slate-400 hover:bg-opacity-25 hover:rounded-full px-2 pt-2 pb-0 "><img src="edit.svg" alt="edit"></a></div>  
+        <a href="{{ route('notas.update', ['nota' => $nota->id]) }}" ><div class="hover:bg-slate-400 hover:bg-opacity-25 hover:rounded-full px-2 pt-2 pb-0 ">
+        <img src="edit.svg" alt="edit" title="Editar nota"></a></div>  
 
         {{-- alterar cor --}}
         <div :class="{ 'hover:bg-slate-400 hover:bg-opacity-25 hover:rounded-full': !open }" class="p-2 z-50" x-data="{ open: false }">
-            <button @click="open = !open" :class="{ 'closed-styles': !open }"><img src="color.svg" alt="color"></button>
+            <button @click="open = !open" :class="{ 'closed-styles': !open }"><img src="color.svg" alt="color" title="Mudar cor"></button>
 
             <div x-show="open" x-transition @click.outside="open = false">
                 <div class="flex-wrap bg-white p-2 rounded-lg shadow-md w-[19rem]">
@@ -24,18 +25,19 @@
                             class="rounded-full h-9 w-9 m-1 shadow-xl hover:border-solid hover:border-2 hover:border-black bg-[{{ $cor }}]"
                             style="@if($corNota == $cor) border: 2px solid black @endif"
                             wire:click="changeColor({{ $nota->id }}, '{{ $cor }}')"
+                            title="Selecionar cor"
                         ></button>
                     @endforeach
                 </div>
             </div>  
         </div>
-        <p class="text-xs text-gray-800 pt-2 ml-auto">{{ $nota->created_at->format('d/m/Y h:m') }}</p>
+        <p class="text-xs text-gray-800 pt-2 ml-auto" title="{{ $nota->created_at->format('d/m/Y h:m') }}">{{ $nota->created_at->format('d/m/Y h:m') }}</p>
         {{-- deletar nota --}}
         <div class="hover:bg-slate-400 hover:bg-opacity-25 hover:rounded-full ml-auto px-2 pt-2 pb-0"><button
                 type="button"
                 wire:click="deleteNota({{ $nota->id }})"
-                wire:confirm.prompt="Quer mesmo deletar a nota ( {{ $nota->titulo }} ) ? \n\n Digite 'DELETE' para confirmar.|DELETE">
-                <img src="X.svg" alt="delete" >
+                wire:confirm.prompt="Quer mesmo deletar a nota ( {{ $nota->titulo }} ) ? \n\n Digite 'DELETE' para confirmar.|DELETE" title="Deletar nota">
+                <img src="X.svg" alt="delete">
             </button>
         </div>
        

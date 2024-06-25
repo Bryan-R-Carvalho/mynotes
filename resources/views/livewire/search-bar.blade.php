@@ -2,6 +2,6 @@
     <form wire:submit="eventSearch" class="flex w-full">
         @csrf
         <input type="text" wire:model="query" class="w-full text-[1rem]" @auth placeholder="Pesquisar notas" @else placeholder="Faça login para pesquisar" @endauth>
-        <button type="submit"><img class="h-full" src="search.svg" alt="search"></button>
+        <button type="submit"><img class="h-full" src="search.svg" alt="search" title="Buscar"></button>
     </form>
 </div>

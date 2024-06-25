@@ -27,7 +27,7 @@
     <body class="inter antialiased grid">
         <nav class="bg-white shadow-md">
             <div class="flex items-center pt-3 pb-2">
-                <a class="" href="/">
+                <a class="" href="/" title="Home">
                     <img src="icon.svg" alt="CoreNotes" class="px-3 md:px-4">
                 </a>
                 <p class="inter text-[#4B5563]" >CoreNotes</p>
