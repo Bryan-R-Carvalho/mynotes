@@ -14,10 +14,32 @@ class Tags extends Component
 
     public $tags;
 
+    public $tagName;
+
+    public $cor;
+
     public function mount()
     {
         $this->cores = CoresNota::getAllColors();
         $this->tags = Tag::where('user_id', auth()->id())->get();
+    }
+
+    public function store($numberCollor)
+    {
+        $this->validate([
+            'tagName' => 'required|string|max:9',
+            
+        ], [
+            'tagName.max' => 'O campo nome deve ter no máximo 9 caracteres',
+    ]);
+        Tag::updateOrCreate(
+            ['user_id' => auth()->id(), 'cor' => $numberCollor],
+            ['name' => $this->tagName]
+        );
+
+        $this->tagName = '';
+        $this->tags = Tag::where('user_id', auth()->id())->get();
+
     }
 
     public function selectTag($cor)

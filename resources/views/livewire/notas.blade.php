@@ -10,6 +10,7 @@
     @endif
     <p class="text-gray-600 min-h-72 max-h-72 text-pretty" >{{ $nota->conteudo }}</p>
     <div class="flex">
+    
         {{-- editar nota --}}
         <a href="{{ route('notas.update', ['nota' => $nota->id]) }}" ><div class="hover:bg-slate-400 hover:bg-opacity-25 hover:rounded-full px-2 pt-2 pb-0 ">
         <img src="edit.svg" alt="edit" title="Editar nota"></a></div>  
@@ -32,6 +33,7 @@
             </div>  
         </div>
         <p class="text-xs text-gray-800 pt-2 ml-auto" title="{{ $nota->created_at->format('d/m/Y h:m') }}">{{ $nota->created_at->format('d/m/Y h:m') }}</p>
+
         {{-- deletar nota --}}
         <div class="hover:bg-slate-400 hover:bg-opacity-25 hover:rounded-full ml-auto px-2 pt-2 pb-0"><button
                 type="button"
