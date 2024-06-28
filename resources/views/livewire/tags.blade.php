@@ -1,4 +1,4 @@
-<div class="flex justify-center w-full pb-5">
+<div class="flex flex-wrap justify-center w-full pb-5">
 
     @foreach($cores as $cor)
         @php
@@ -8,7 +8,7 @@
         
         <div class="relative group">
             <button wire:click="selectTag('{{ $cor }}')"  
-                    class="rounded-full h-9 w-20 m-1 pb shadow-xl hover:border-solid hover:border-2 hover:border-black bg-[{{ $cor }}]" 
+                    class="rounded-full h-9 w-20 m-1 pb shadow-xl hover:border-solid hover:border-2 hover:border-black bg-[{{ $cor }}] z-10" 
                     style="@if($corTag == $cor) border: 2px solid black @endif"
                     title="Buscar cor">
                 <p class="text-sm text-gray-800">{{ $tagName !== null ? $tagName : '' }}</p>
@@ -22,7 +22,7 @@
                     </svg>
                 </button>
             
-                <div  class="absolute right-0 top-0 mt-8 ms-6" x-show="open" x-transition @click.outside="open = false">
+                <div class="absolute right-0 top-0 mt-8 ms-6 z-20" x-show="open" x-transition @click.outside="open = false">
                     <div class="bg-white p-2 rounded-lg shadow-md w-56">
                         <form wire:submit.prevent="store({{ $numberCollor }})">
                             <input type="text" wire:model="tagName" class="w-40 h-8 p-1 border border-gray-300 rounded-md" placeholder="Nome da tag">

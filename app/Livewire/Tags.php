@@ -28,10 +28,10 @@ class Tags extends Component
     {
         $this->validate([
             'tagName' => 'required|string|max:9',
-            
+
         ], [
             'tagName.max' => 'O campo nome deve ter no máximo 9 caracteres',
-    ]);
+        ]);
         Tag::updateOrCreate(
             ['user_id' => auth()->id(), 'cor' => $numberCollor],
             ['name' => $this->tagName]
