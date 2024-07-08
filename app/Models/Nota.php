@@ -15,6 +15,7 @@ class Nota extends Model
         'conteudo',
         'favoritado',
         'cor',
+        'image',
     ];
 
     protected function find($id)
