@@ -8,14 +8,20 @@
     @else
         <hr class="my-2 border border-white ">
     @endif
-    <p class="text-gray-600 min-h-72 max-h-72 text-pretty" >{{ $nota->conteudo }}</p>
-    {{-- se nota tiver imagem mostra o nome --}}
-    @if($nota->image)
-        <p class="text-xs text-gray-800 font-semibold " title="{{ $nota->image }}">{{ $nota->image }}</p>
-        <img src="{{ asset('/storage/app/images/19.png') }}" >
-    @endif
+    <p class="text-gray-600 min-h-64 max-h-64 text-pretty " >{{ $nota->conteudo }}</p>
     
-    <div class="flex pt-1">
+    <div class="flex h-6">
+        {{-- se nota tiver imagem mostra o nome --}}
+        @if($nota->image)
+            <p class="text-xs text-gray-800 font-semibold pe-4" title="{{ $nota->image }}">{{ $nota->image }}</p>
+            <button type="button" class="btn">
+                <img src="{{ asset('/storage/app/images/'. $nota->image) }}" >
+            </button>
+        @endif
+
+    </div>
+    
+    <div class="flex ">
 
         {{-- editar nota --}}
         <a href="{{ route('notas.update', ['nota' => $nota->id]) }}" ><div class="hover:bg-slate-400 hover:bg-opacity-25 hover:rounded-full px-2 pt-2 pb-1 h-9 " title="Editar nota">

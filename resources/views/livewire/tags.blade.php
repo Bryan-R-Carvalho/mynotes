@@ -22,11 +22,11 @@
                     </svg>
                 </button>
             
-                <div class="absolute right-0 top-0 mt-8 ms-6 z-20" x-show="open" x-transition @click.outside="open = false">
-                    <div class="bg-white p-2 rounded-lg shadow-md w-56">
+                <div class="absolute flex flex-wrap  top-0 mt-8 z-20" x-show="open" x-transition @click.outside="open = false">
+                    <div class="bg-white py-2 ps-2 pe-1 rounded-lg shadow-md w-48">
                         <form wire:submit.prevent="store({{ $numberCollor }})">
-                            <input type="text" wire:model="tagName" class="w-40 h-8 p-1 border border-gray-300 rounded-md" placeholder="Nome da tag">
-                            <button type="submit" class="h-8 w-8 m-1 shadow-xl bg-green-500 rounded-full hover:bg-green-600" title="salvar">
+                            <input type="text" wire:model="tagName" class="w-36 h-8 p-1 border border-gray-300 rounded-md" placeholder="Nome da tag">
+                            <button type="submit" class="h-7 w-7 shadow-xl bg-green-500 rounded-full hover:bg-green-600" title="salvar">
                                 <p class="text-white">-></p>
                             </button>
                         </form>
