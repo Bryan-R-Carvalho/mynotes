@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="icon" type="image/x-icon" href="icon.svg" />
-        <title>{{ config('app.name', 'CoreNotes') }}</title>
+        <link rel="icon" type="image/x-icon" href="icon.svg" />  {{-- sticky-note.png --}}
+        <title>{{ config('app.name', 'StickyNotes') }}</title>
         <!-- Fonts -->
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -28,9 +28,9 @@
         <nav class="bg-white shadow-md">
             <div class="flex items-center pt-3 pb-2">
                 <a class="" href="/" title="Home">
-                    <img src="icon.svg" alt="CoreNotes" class="px-3 md:px-4">
+                    <img src="sticky-note.png" alt="StickyNotes" class="w-20 h-12 px-3 md:px-4">
                 </a>
-                <p class="inter text-[#4B5563]" >CoreNotes</p>
+                <p class="inter text-[#4B5563]" >StickyNotes</p>
                 
                 {{-- componente barra de busca --}}
                     <livewire:search-bar />

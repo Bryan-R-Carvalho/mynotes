@@ -6,7 +6,7 @@
 
         <link rel="icon" type="image/x-icon" href="icon.svg" />
 
-        <title>CoreNotes</title>
+        <title>StickyNotes</title>
     </head>
     <body>
         <h1>

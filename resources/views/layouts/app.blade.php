@@ -6,7 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <link rel="icon" type="image/x-icon" href="icon.svg" />
-        <title>{{ config('app.name', 'CoreNotes') }}</title>
+        <title>{{ config('app.name', 'StickyNotes') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -18,7 +18,6 @@
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
             @include('layouts.navigation')
-
         </div>
         @yield('body')
     </body>
